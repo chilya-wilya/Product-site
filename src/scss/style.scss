@@ -59,6 +59,7 @@
         margin-right: 30px;
         font-size: 16px;
         font-weight: 600;
+        cursor: pointer;
 
         &_transparent {
             background-color: transparent;
@@ -70,6 +71,7 @@
             margin-right: 24px;
             font-size: 16px;
             font-weight: 600;
+            cursor: pointer;
         }
     }
 
@@ -81,12 +83,15 @@
         position: relative;
 
         &::after {
+            content: '';
             position: absolute;
             width: 7px;
-            height: 14px;
+            height: 12px;
             background-color: $primary-bg;
-            border-top-right-radius: 50%;
-            border-bottom-right-radius: 50%;
+            border-top-right-radius: 100%;
+            border-bottom-right-radius: 100%;
+            top: 2.9px;
+            left: 6.9px;
         }
     }
     
@@ -128,7 +133,8 @@
         font-weight: 700;
         text-align: center;
         color: $secondary-text;
-        margin-right: 30px;
+        margin-right: 48px;
+        cursor: pointer;
     }
 
     &__link {
@@ -136,5 +142,112 @@
         font-size: 16px;
         font-weight: 600;
         color: $primary-bg;
+        position: relative;
+
+        &::before {
+            content: url(../assets/img/play_button.svg);
+            position: absolute;
+            top: 3px;
+            left: -25px;
+        }
     }
+}
+
+.product {
+
+    padding: 0 150px;
+    margin-bottom: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__wrapper {
+        margin-bottom: 75px;
+    }
+
+    &__title {
+        font-family: Poppins;
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        color: $primary-text;
+        margin-bottom: 58px;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 60px;
+    }
+
+    &__image {
+        height: 50px;
+        width: 50px;
+        border-radius: 19px;
+        box-shadow: 2px 17px 26px 0px rgba(34, 60, 80, 0.18);
+        margin-bottom: 46px;
+
+        &_green {
+            background-color: $primary-bg;
+            position: relative;
+
+            &::after {
+                content: url(../assets/img/arrow.svg);
+                position: absolute;
+                top: 30%;
+                left: 40%;
+            }
+        }
+
+        &_violet {
+            background-color: $blue-bg;
+            position: relative;
+
+            &::after {
+                content: url(../assets/img/wave.svg);
+                position: absolute;
+                top: 27%;
+                left: 33%;
+            }
+        }
+
+        &_purple {
+            background-color: $purple-bg;
+            position: relative;
+
+            &::after {
+                content: url(../assets/img/heart.svg);
+                position: absolute;
+                top: 28%;
+                left: 35%;
+            }
+        }
+
+        &_red {
+            background-color: $red-bg;
+            position: relative;
+
+            &::after {
+                content: url(../assets/img/clock.svg);
+                position: absolute;
+                top: 30%;
+                left: 36%;
+            }
+        }
+    }
+
+    &__name {
+        font-size: 22px;
+        font-weight: 600;
+        text-align: left;
+        color: $primary-text;
+        margin-bottom: 13px;
+    }
+
+    &__description {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        color: $primary-text;
+    }
+
 }

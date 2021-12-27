@@ -8,10 +8,20 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.button {
+    border: none;
+    background-color: $primary-bg;
+    border-radius: 4px;
+    color: $secondary-text;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 .header {
     display: flex;
     align-items: center;
-    padding: 23px 144px 20px 142px;
+    padding: 22px 150px;
     margin-bottom: 25px;
     
     &__logo {
@@ -52,26 +62,15 @@
     &__button {
         height: 43px;
         width: 110px;
-        border: none;
-        background-color: $primary-bg;
-        border-radius: 4px;
-        color: $secondary-text;
         margin-right: 30px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
 
         &_transparent {
             background-color: transparent;
             width: 102px;
             height: 43px;
-            color: primary-text;
+            color: $primary-text;
             border: 1px solid $primary-border;
-            border-radius: 4px;
             margin-right: 24px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
         }
     }
 
@@ -133,7 +132,6 @@
         font-weight: 700;
         text-align: center;
         color: $secondary-text;
-        margin-right: 48px;
         cursor: pointer;
     }
 
@@ -143,6 +141,7 @@
         font-weight: 600;
         color: $primary-bg;
         position: relative;
+        margin-left: 48px;
 
         &::before {
             content: url(../assets/img/play_button.svg);
@@ -153,24 +152,29 @@
     }
 }
 
-.product {
+.title {
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: $primary-text;
+}
 
+.product {
     padding: 0 150px;
     margin-bottom: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(to top, #EDEDED 0.35%, rgba(255, 255, 255, 0.0001) 99.63%);
+    border-radius: 0% 0% 56% 56%/0% 0% 70% 70%;
+    height: 54vh;
 
     &__wrapper {
         margin-bottom: 75px;
     }
 
     &__title {
-        font-family: Poppins;
-        font-size: 32px;
-        font-weight: 700;
-        text-align: center;
-        color: $primary-text;
         margin-bottom: 58px;
     }
 
@@ -183,7 +187,7 @@
         height: 50px;
         width: 50px;
         border-radius: 19px;
-        box-shadow: 2px 17px 26px 0px rgba(34, 60, 80, 0.18);
+        box-shadow: 0px 7px 6px 0px rgba(34, 60, 80, 0.3);
         margin-bottom: 46px;
 
         &_green {
@@ -250,4 +254,115 @@
         color: $primary-text;
     }
 
+}
+
+.article {
+    padding: 0 150px;
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    margin-bottom: 150px;
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        color: $primary-text;
+        margin-bottom: 23px;
+
+        em {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: left;
+            font-style: normal;
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        margin-bottom: 12px;
+        color: $primary-text;
+    }
+
+    &__info {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        color: $primary-text;
+        margin-bottom: 25px;
+    }
+
+    &__point {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__check {
+
+        min-width: 35px;
+        max-width: 35px;
+        height: 35px;
+        border-radius: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::after {
+            content: '';
+            width: 8px;
+            height: 16px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate( 45deg);
+        }
+
+        &.yellow {
+            background-color: $orange-bg;
+        }
+
+        &.red {
+            background-color: $red-bg;
+        }
+
+        &.blue {
+            background-color: $blue-bg;
+        }
+    }
+}
+
+.experts {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #EDEDED 0.35%, rgba(255, 255, 255, 0.0001) 99.63%);
+    padding: 50px 150px 0;
+    border-radius: 50% 50% 0% 0%/50% 50% 0% 0%;
+
+    &__title, &__subtitle {
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+.subtitle {
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+color: #22343D;
+}
+
+    &__button {
+        width: 216px;
+        height: 53px;
+        align-self: center;
+    }
+}
+
+.strategies {
+    height: 100vh;
 }
